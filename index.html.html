@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajay Keshri & Associates | Chartered Accountants</title>
+  <meta name="description" content="Ajay Keshri & Associates — Professional CA firm. Tax Filing, GST, Audit, TDS, Business Registration. Waidhan, Singrauli, M.P. GSTIN: 23FYGPK1520L1ZJ" />
+  <meta name="keywords" content="CA Waidhan, Chartered Accountant Singrauli, tax filing Waidhan, GST Singrauli, Ajay Keshri CA" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <style>
+/* ══════════════════════════════════════════════════════════════
+   AJAY KESHRI & ASSOCIATES — PREMIUM STYLESHEET
+   Glassmorphism · Dark/Light Mode · Poppins + Cormorant
+══════════════════════════════════════════════════════════════ */
+
+/* ── RESET ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── DARK MODE (default) ─────────────────────────────────── */
+:root,
+[data-theme="dark"] {
+  --bg-base:        #060D18;
+  --bg-surface:     #0B1728;
+  --bg-elevated:    #102038;
+  --gold:           #C9A84C;
+  --gold-light:     #E8C97A;
+  --gold-pale:      rgba(201,168,76,0.11);
+  --gold-glow:      rgba(201,168,76,0.28);
+  --text-primary:   #F0EDE6;
+  --text-secondary: rgba(240,237,230,0.62);
+  --text-muted:     rgba(240,237,230,0.33);
+  --border:         rgba(201,168,76,0.14);
+  --border-hover:   rgba(201,168,76,0.38);
+  --glass-bg:       rgba(11,23,40,0.65);
+  --glass-border:   rgba(201,168,76,0.16);
+  --glass-blur:     18px;
+  --shadow-sm:      0 4px 24px rgba(0,0,0,0.38);
+  --shadow-md:      0 8px 40px rgba(0,0,0,0.52);
+  --shadow-gold:    0 0 40px rgba(201,168,76,0.14);
+  --grad-hero:      radial-gradient(ellipse at 70% 35%, rgba(201,168,76,0.08) 0%, transparent 55%),
+                    radial-gradient(ellipse at 5% 80%, rgba(10,55,130,0.15) 0%, transparent 50%),
+                    linear-gradient(160deg, #060D18 0%, #0B1728 100%);
+  --grad-alt:       linear-gradient(180deg, #060D18 0%, #0B1728 100%);
+  --green-wa:       #25D366;
+  color-scheme: dark;
+}
+
+/* ── LIGHT MODE ──────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-base:        #F4F1EA;
+  --bg-surface:     #FFFFFF;
+  --bg-elevated:    #FDFBF7;
+  --gold:           #B8922F;
+  --gold-light:     #D4A93A;
+  --gold-pale:      rgba(184,146,47,0.1);
+  --gold-glow:      rgba(184,146,47,0.22);
+  --text-primary:   #0D1B2A;
+  --text-secondary: #4A4A5A;
+  --text-muted:     #9A9AA0;
+  --border:         rgba(184,146,47,0.2);
+  --border-hover:   rgba(184,146,47,0.44);
+  --glass-bg:       rgba(255,255,255,0.58);
+  --glass-border:   rgba(184,146,47,0.2);
+  --glass-blur:     14px;
+  --shadow-sm:      0 4px 24px rgba(0,0,0,0.08);
+  --shadow-md:      0 8px 40px rgba(0,0,0,0.13);
+  --shadow-gold:    0 0 40px rgba(184,146,47,0.1);
+  --grad-hero:      radial-gradient(ellipse at 70% 35%, rgba(184,146,47,0.07) 0%, transparent 55%),
+                    linear-gradient(160deg, #F4F1EA 0%, #EAE6DC 100%);
+  --grad-alt:       linear-gradient(180deg, #F4F1EA 0%, #FFFFFF 100%);
+  --green-wa:       #128C7E;
+  color-scheme: light;
+}
+
+/* ── BASE ────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--bg-surface);
+}
+html::-webkit-scrollbar { width: 5px; }
+html::-webkit-scrollbar-track { background: var(--bg-surface); }
+html::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* ── GLASS UTILITY ───────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── SCROLL PROGRESS ─────────────────────────────────────── */
+#scroll-progress {
+  position: fixed; top: 0; left: 0;
+  height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* ── LOADER ──────────────────────────────────────────────── */
+#loader {
+  position: fixed; inset: 0;
+  background: var(--bg-base);
+  z-index: 10000;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+#loader.loaded { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.loader-inner { text-align: center; }
+.loader-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px; font-weight: 600;
+  color: var(--gold); letter-spacing: 3px;
+  animation: pulse-gold 1.4s ease-in-out infinite;
+}
+.loader-amp { color: var(--gold-light); }
+.loader-tagline {
+  font-size: 13px; font-weight: 500; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-muted);
+  margin-top: 4px; margin-bottom: 24px;
+}
+.loader-bar {
+  width: 220px; height: 2px; background: var(--border);
+  margin: 0 auto 14px; border-radius: 2px; overflow: hidden;
+}
+.loader-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  animation: loading-bar 1.8s ease-in-out forwards;
+}
+.loader-text { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted); }
+
+@keyframes loading-bar { 0%{width:0%} 60%{width:80%} 100%{width:100%} }
+@keyframes pulse-gold {
+  0%,100% { opacity:1; text-shadow: 0 0 30px var(--gold-glow); }
+  50%      { opacity:0.6; text-shadow: none; }
+}
+
+/* ── NAVBAR ──────────────────────────────────────────────── */
+#navbar { position: fixed; top:0; left:0; right:0; z-index:500; transition: background 0.35s, box-shadow 0.35s; }
+
+.nav-container {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%; height: 72px; transition: height 0.3s;
+}
+#navbar.scrolled .nav-container { height: 60px; }
+#navbar.scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+.nav-logo {
+  text-decoration: none;
+  display: flex; align-items: center; gap: 12px;
+}
+.logo-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600;
+  color: var(--gold);
+  background: var(--gold-pale); border: 1px solid var(--border);
+  padding: 4px 10px; border-radius: 6px;
+  white-space: nowrap; letter-spacing: 1px;
+}
+.logo-mark span { color: var(--gold-light); }
+.logo-text { display: flex; flex-direction: column; }
+.logo-firm {
+  font-size: 13px; font-weight: 600;
+  color: var(--text-primary); line-height: 1.2; letter-spacing: 0.3px;
+}
+.logo-sub { font-size: 10px; color: var(--text-muted); letter-spacing: 1px; }
+
+/* Nav links */
+.nav-links { display: flex; gap: 4px; list-style: none; }
+.nav-link {
+  text-decoration: none; color: var(--text-secondary);
+  font-size: 13px; font-weight: 400;
+  padding: 6px 12px; border-radius: 6px; position: relative;
+  transition: color 0.25s; display: flex; align-items: center; gap: 5px;
+}
+.nav-link::after {
+  content:''; position:absolute; bottom:2px; left:50%;
+  width:0; height:1.5px; background:var(--gold);
+  transform:translateX(-50%); transition:width 0.3s; border-radius:2px;
+}
+.nav-link:hover, .nav-link.active { color: var(--gold); }
+.nav-link:hover::after, .nav-link.active::after { width: 55%; }
+
+.nav-cta {
+  background: var(--gold);
+  color: var(--bg-base) !important;
+  font-weight: 600 !important; border-radius: 8px;
+  transition: background 0.25s, transform 0.15s, box-shadow 0.25s !important;
+}
+.nav-cta::after { display:none; }
+.nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); box-shadow: 0 4px 20px var(--gold-glow); }
+
+/* Nav ICAI */
+.nav-icai { opacity: 0.8; transition: opacity 0.2s; cursor: default; }
+.nav-icai:hover { opacity: 1; }
+
+/* Controls */
+.nav-controls { display: flex; align-items: center; gap: 8px; }
+
+#theme-toggle {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 1px solid var(--border); background: transparent; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; transition: border-color 0.25s, background 0.25s;
+}
+#theme-toggle:hover { background: var(--gold-pale); border-color: var(--border-hover); }
+.theme-icon { position:absolute; font-size:14px; transition:opacity 0.3s,transform 0.3s; }
+.theme-icon.sun  { opacity:0; transform: rotate(90deg) scale(0.5); }
+.theme-icon.moon { opacity:1; transform: rotate(0deg) scale(1); }
+[data-theme="light"] .theme-icon.sun  { opacity:1; transform: rotate(0deg) scale(1); }
+[data-theme="light"] .theme-icon.moon { opacity:0; transform: rotate(-90deg) scale(0.5); }
+
+#hamburger { display:none; flex-direction:column; gap:5px; background:transparent; border:none; cursor:pointer; padding:6px; border-radius:6px; transition:background 0.2s; }
+#hamburger:hover { background: var(--gold-pale); }
+#hamburger span { display:block; width:22px; height:2px; background:var(--text-primary); border-radius:2px; transition:transform 0.35s,opacity 0.35s; transform-origin:center; }
+#hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#hamburger.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+#hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile menu */
+#mobile-menu { max-height:0; overflow:hidden; transition:max-height 0.45s,padding 0.35s; background:var(--glass-bg); backdrop-filter:blur(20px); border-top:1px solid var(--border); }
+#mobile-menu.open { max-height:460px; padding:12px 0 20px; }
+#mobile-menu ul { list-style:none; padding:0 6%; }
+.mob-link { display:block; text-decoration:none; color:var(--text-secondary); font-size:15px; padding:12px 0; border-bottom:1px solid var(--border); transition:color 0.2s,padding-left 0.2s; }
+.mob-link:hover { color:var(--gold); padding-left:8px; }
+.mob-cta { margin-top:14px; display:inline-block; background:var(--gold); color:var(--bg-base) !important; font-weight:600; padding:12px 28px; border-radius:8px; border-bottom:none !important; }
+
+/* ── BUTTONS ─────────────────────────────────────────────── */
+.btn-primary {
+  display:inline-flex; align-items:center; gap:10px;
+  background:linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color:#060D18; padding:13px 28px; font-size:14px; font-weight:600;
+  font-family:'Poppins',sans-serif; text-decoration:none; border:none;
+  border-radius:8px; cursor:pointer; letter-spacing:0.3px;
+  position:relative; overflow:hidden;
+  transition:transform 0.2s,box-shadow 0.2s,filter 0.2s;
+}
+.btn-primary::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(255,255,255,0.15) 0%,transparent 60%); opacity:0; transition:opacity 0.25s; }
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 28px var(--gold-glow); filter:brightness(1.05); }
+.btn-primary:hover::before { opacity:1; }
+.btn-primary svg { width:16px; height:16px; flex-shrink:0; transition:transform 0.2s; }
+.btn-primary:hover svg { transform:translateX(3px); }
+
+.btn-outline {
+  display:inline-flex; align-items:center; gap:8px;
+  border:1.5px solid var(--border-hover); color:var(--gold-light);
+  padding:12px 24px; font-size:14px; font-weight:500;
+  font-family:'Poppins',sans-serif; text-decoration:none; border-radius:8px;
+  transition:border-color 0.25s,background 0.25s,color 0.25s;
+}
+.btn-outline:hover { border-color:var(--gold); background:var(--gold-pale); }
+
+/* ── SECTIONS ────────────────────────────────────────────── */
+section { padding: 110px 8%; position: relative; }
+.section-head { max-width: 600px; margin-bottom: 70px; }
+.section-eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:11px; font-weight:600; letter-spacing:3.5px;
+  text-transform:uppercase; color:var(--gold); margin-bottom:14px;
+}
+.section-eyebrow::before { content:''; display:block; width:28px; height:1.5px; background:var(--gold); flex-shrink:0; }
+.section-title {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(34px,4vw,54px); font-weight:600; line-height:1.1;
+  color:var(--text-primary); margin-bottom:18px;
+}
+.section-title em { font-style:italic; color:var(--gold); }
+.section-sub { font-size:15px; line-height:1.8; color:var(--text-secondary); max-width:500px; }
+
+/* Reveal */
+.reveal-up,.reveal-left,.reveal-right { opacity:0; transition:opacity 0.7s,transform 0.7s; transition-delay:var(--delay,0s); }
+.reveal-up    { transform:translateY(40px); }
+.reveal-left  { transform:translateX(-40px); }
+.reveal-right { transform:translateX(40px); }
+.reveal-up.visible,.reveal-left.visible,.reveal-right.visible { opacity:1; transform:translate(0); }
+
+/* ── HERO ────────────────────────────────────────────────── */
+#hero {
+  min-height:100vh; background:var(--grad-hero);
+  display:flex; flex-direction:column; justify-content:center;
+  padding:130px 8% 80px; position:relative; overflow:hidden;
+}
+#particle-canvas { position:absolute; inset:0; pointer-events:none; opacity:0.45; }
+
+.hero-orb { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; animation:orb-float 8s ease-in-out infinite; }
+.orb-1 { width:500px; height:500px; background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%); top:-80px; right:-80px; }
+.orb-2 { width:400px; height:400px; background:radial-gradient(circle,rgba(20,80,160,0.09) 0%,transparent 70%); bottom:-50px; left:3%; animation-delay:3s; }
+.orb-3 { width:280px; height:280px; background:radial-gradient(circle,rgba(201,168,76,0.04) 0%,transparent 70%); top:45%; left:42%; animation-delay:6s; }
+@keyframes orb-float { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(20px,-30px) scale(1.05)} 66%{transform:translate(-15px,20px) scale(0.97)} }
+
+.hero-grid { position:absolute; inset:0; background-image:repeating-linear-gradient(0deg,rgba(201,168,76,0.022) 0px,transparent 1px,transparent 80px),repeating-linear-gradient(90deg,rgba(201,168,76,0.022) 0px,transparent 1px,transparent 80px); pointer-events:none; }
+
+/* ICAI floating hero badge */
+.hero-icai-badge {
+  position: absolute; top: 140px; right: 7%;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  opacity: 0.75;
+  animation: icai-float 5s ease-in-out infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+.icai-badge-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+@keyframes icai-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+
+.hero-content { position:relative; max-width:660px; z-index:2; }
+
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:11.5px; font-weight:500; letter-spacing:1px;
+  text-transform:uppercase; color:var(--gold);
+  background:var(--gold-pale); border:1px solid var(--border);
+  border-radius:50px; padding:6px 16px; margin-bottom:24px;
+}
+.badge-dot { width:7px; height:7px; background:var(--gold); border-radius:50%; animation:blink 2s ease-in-out infinite; }
+@keyframes blink { 0%,100%{opacity:1;box-shadow:0 0 6px var(--gold)} 50%{opacity:0.3;box-shadow:none} }
+
+/* Firm name */
+.hero-firm-name {
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(28px,4vw,52px); font-weight:600;
+  color:var(--text-primary); letter-spacing:1.5px;
+  line-height:1.1; margin-bottom:12px;
+}
+.firm-and { color:var(--gold); display:block; font-size:0.85em; letter-spacing:4px; }
+
+.hero-title { font-family:'Cormorant Garamond',serif; font-size:clamp(22px,3vw,38px); font-weight:400; line-height:1.2; color:var(--text-secondary); margin-bottom:14px; }
+.hero-title-em { display:block; color:var(--gold-light); font-style:italic; min-height:1.2em; }
+.cursor { display:inline-block; color:var(--gold); animation:blink-cur 0.8s step-end infinite; }
+@keyframes blink-cur { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.hero-tagline { font-size:13.5px; color:var(--text-muted); margin-bottom:24px; letter-spacing:0.4px; }
+.hero-divider { width:56px; height:2px; background:linear-gradient(90deg,var(--gold),transparent); margin-bottom:24px; border-radius:2px; }
+.hero-desc { font-size:15px; line-height:1.82; color:var(--text-secondary); max-width:520px; margin-bottom:36px; }
+.hero-buttons { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:24px; }
+
+/* Hero info chips */
+.hero-info-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:4px; }
+.hero-info-chip {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12px; color:var(--text-muted);
+  background:var(--gold-pale); border:1px solid var(--border);
+  border-radius:50px; padding:5px 14px;
+}
+.hero-info-chip strong { color:var(--gold); }
+
+/* Stats */
+.hero-stats { display:flex; gap:16px; flex-wrap:wrap; margin-top:60px; position:relative; z-index:2; }
+.stat-glass { padding:20px 26px; border-radius:14px; text-align:center; min-width:130px; flex:1; transition:transform 0.25s,box-shadow 0.25s; }
+.stat-glass:hover { transform:translateY(-4px); box-shadow:var(--shadow-gold); }
+.stat-num { display:block; font-family:'Cormorant Garamond',serif; font-size:38px; font-weight:600; color:var(--gold); line-height:1; margin-bottom:6px; }
+.stat-label { font-size:11px; color:var(--text-muted); letter-spacing:1px; text-transform:uppercase; }
+
+/* Scroll hint */
+.scroll-hint { position:absolute; bottom:36px; left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:8px; opacity:0.4; animation:hint-fade 3s ease-in-out 2s forwards; }
+@keyframes hint-fade { 0%{opacity:0.4} 100%{opacity:0;pointer-events:none} }
+.scroll-mouse { width:22px; height:34px; border:1.5px solid var(--text-muted); border-radius:12px; display:flex; justify-content:center; padding-top:6px; }
+.scroll-wheel { width:3px; height:6px; background:var(--gold); border-radius:2px; animation:scroll-w 1.6s ease-in-out infinite; }
+@keyframes scroll-w { 0%{transform:translateY(0);opacity:1} 80%{transform:translateY(8px);opacity:0} 100%{transform:translateY(0);opacity:0} }
+.scroll-hint span { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); }
+
+/* ── SERVICES ────────────────────────────────────────────── */
+#services { background: var(--grad-alt); }
+.services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+.service-card { padding:40px 32px; border-radius:16px; position:relative; overflow:hidden; cursor:default; transition:transform 0.3s,box-shadow 0.3s; }
+.service-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md), 0 0 50px var(--gold-pale); }
+.card-glow { position:absolute; inset:-1px; border-radius:16px; background:linear-gradient(135deg,var(--gold-pale) 0%,transparent 60%); opacity:0; transition:opacity 0.35s; pointer-events:none; }
+.service-card:hover .card-glow { opacity:1; }
+.service-num { position:absolute; top:20px; right:24px; font-family:'Cormorant Garamond',serif; font-size:48px; font-weight:600; color:var(--border); line-height:1; transition:color 0.3s; }
+.service-card:hover .service-num { color:var(--gold-pale); }
+.service-icon { width:56px; height:56px; border:1.5px solid var(--border); border-radius:12px; display:flex; align-items:center; justify-content:center; margin-bottom:24px; background:var(--gold-pale); transition:border-color 0.3s,box-shadow 0.3s; }
+.service-card:hover .service-icon { border-color:var(--gold); box-shadow:0 0 20px var(--gold-glow); }
+.service-icon svg { width:24px; height:24px; stroke:var(--gold); }
+.service-name { font-size:18px; font-weight:600; color:var(--text-primary); margin-bottom:10px; transition:color 0.3s; }
+.service-card:hover .service-name { color:var(--gold-light); }
+.service-desc { font-size:14px; line-height:1.75; color:var(--text-secondary); }
+.card-arrow { margin-top:20px; font-size:18px; color:var(--gold); opacity:0; transform:translateX(-8px); transition:opacity 0.3s,transform 0.3s; }
+.service-card:hover .card-arrow { opacity:1; transform:translateX(0); }
+
+/* ── ABOUT ───────────────────────────────────────────────── */
+#about { display:grid; grid-template-columns:1fr 1.3fr; gap:80px; align-items:center; background:var(--bg-base); }
+.about-visual { position:relative; display:flex; justify-content:center; }
+.about-card { border-radius:20px; padding:30px 26px; width:100%; max-width:360px; transition:box-shadow 0.3s; }
+.about-card:hover { box-shadow:var(--shadow-gold); }
+
+/* ICAI in about */
+.icai-logo-wrap { display:flex; align-items:center; gap:12px; padding-bottom:18px; margin-bottom:18px; border-bottom:1px solid var(--border); }
+.icai-svg-wrap { flex-shrink:0; }
+.icai-label { display:block; font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); line-height:1.5; }
+.icai-sub   { display:block; font-size:10px; color:var(--text-muted); letter-spacing:0.3px; margin-top:2px; }
+
+.about-avatar { width:86px; height:86px; border-radius:50%; background:var(--gold-pale); border:2px solid var(--border-hover); display:flex; align-items:center; justify-content:center; font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:600; color:var(--gold); margin:0 auto 14px; box-shadow:0 0 28px var(--gold-glow); }
+.about-meta { text-align:center; margin-bottom:14px; }
+.about-meta-name { font-size:17px; font-weight:600; color:var(--text-primary); margin-bottom:3px; }
+.about-meta-title { font-size:12px; color:var(--text-muted); letter-spacing:0.3px; }
+
+.qual-pills { display:flex; flex-wrap:wrap; gap:6px; justify-content:center; margin-bottom:18px; }
+.qual-pill { font-size:11px; font-weight:600; letter-spacing:0.4px; background:var(--gold-pale); border:1px solid var(--border); color:var(--gold); padding:4px 12px; border-radius:50px; transition:border-color 0.2s; }
+.qual-pill.gold-pill { background:linear-gradient(135deg,var(--gold),var(--gold-light)); color:#060D18; border-color:transparent; }
+
+.about-stats-mini { display:flex; justify-content:center; align-items:center; gap:16px; padding-top:16px; border-top:1px solid var(--border); }
+.about-stats-mini > div { text-align:center; display:flex; flex-direction:column; gap:2px; }
+.about-stats-mini strong { font-size:18px; font-weight:700; color:var(--gold); display:block; }
+.about-stats-mini span { font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.4px; }
+.about-divider-v { width:1px; height:32px; background:var(--border); }
+
+/* Float badges */
+.float-badge { position:absolute; display:flex; align-items:center; gap:7px; font-size:12px; font-weight:500; color:var(--text-primary); background:var(--glass-bg); backdrop-filter:blur(12px); border:1px solid var(--border); border-radius:50px; padding:8px 14px; white-space:nowrap; box-shadow:var(--shadow-sm); animation:float-bob 4s ease-in-out infinite; }
+.float-badge svg { stroke:var(--gold); }
+.fb-1 { top:-14px; right:-20px; }
+.fb-2 { bottom:40px; left:-26px; animation-delay:2s; }
+@keyframes float-bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+/* About text */
+.about-text { font-size:15px; line-height:1.85; color:var(--text-secondary); margin-bottom:14px; }
+
+/* GST highlight */
+.gst-highlight { display:flex; align-items:center; gap:14px; padding:16px 20px; border-radius:12px; margin:22px 0; border-color:var(--border-hover) !important; }
+.gst-highlight svg { stroke:var(--gold); flex-shrink:0; }
+.gst-label { font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
+.gst-value { font-size:16px; font-weight:700; color:var(--text-primary); letter-spacing:1.5px; }
+
+.about-credentials { margin-top:18px; display:flex; flex-direction:column; gap:10px; }
+.credential-item { display:flex; align-items:center; gap:14px; padding:13px 18px; border-radius:10px; font-size:13.5px; color:var(--text-secondary); transition:border-color 0.25s,box-shadow 0.25s; }
+.credential-item:hover { border-color:var(--border-hover); box-shadow:0 0 20px var(--gold-pale); }
+.credential-dot { width:8px; height:8px; background:var(--gold); border-radius:50%; flex-shrink:0; box-shadow:0 0 8px var(--gold-glow); }
+
+/* ── EXPERIENCE ──────────────────────────────────────────── */
+#experience { background: var(--grad-alt); }
+.exp-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+.exp-card { display:flex; gap:18px; padding:28px 24px; border-radius:14px; position:relative; overflow:hidden; transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s; }
+.exp-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-color:var(--border-hover); }
+.exp-icon { width:52px; height:52px; flex-shrink:0; border-radius:12px; background:var(--gold-pale); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; transition:border-color 0.3s,box-shadow 0.3s; }
+.exp-card:hover .exp-icon { border-color:var(--gold); box-shadow:0 0 16px var(--gold-glow); }
+.exp-icon svg { width:22px; height:22px; stroke:var(--gold); }
+.exp-content { flex:1; }
+.exp-content h3 { font-size:16px; font-weight:600; color:var(--text-primary); margin-bottom:8px; }
+.exp-content p  { font-size:13.5px; line-height:1.75; color:var(--text-secondary); }
+.exp-tag { position:absolute; top:16px; right:16px; font-size:10px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--gold); background:var(--gold-pale); border:1px solid var(--border); border-radius:50px; padding:3px 10px; }
+
+/* ── WHY US ──────────────────────────────────────────────── */
+#why { background:var(--bg-base); }
+.why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.why-card { padding:34px 26px; border-radius:16px; transition:transform 0.3s,box-shadow 0.3s,border-color 0.3s; }
+.why-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-color:var(--border-hover); }
+.why-icon { width:50px; height:50px; border-radius:12px; background:var(--gold-pale); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; margin-bottom:18px; transition:box-shadow 0.3s,border-color 0.3s; }
+.why-card:hover .why-icon { border-color:var(--gold); box-shadow:0 0 16px var(--gold-glow); }
+.why-icon svg { width:22px; height:22px; stroke:var(--gold); }
+.why-card h3 { font-size:17px; font-weight:600; color:var(--text-primary); margin-bottom:8px; }
+.why-card p  { font-size:14px; line-height:1.75; color:var(--text-secondary); }
+
+/* ── FAQ ─────────────────────────────────────────────────── */
+#faq { background:var(--grad-alt); }
+.faq-list { max-width:760px; display:flex; flex-direction:column; gap:12px; }
+.faq-item { border:1px solid var(--border); border-radius:12px; overflow:hidden; transition:border-color 0.25s,box-shadow 0.25s; background:var(--glass-bg); backdrop-filter:blur(10px); }
+.faq-item:hover { border-color:var(--border-hover); }
+.faq-item.open  { border-color:var(--gold); box-shadow:0 0 24px var(--gold-pale); }
+.faq-q { width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px; background:transparent; border:none; cursor:pointer; padding:22px 24px; text-align:left; font-family:'Poppins',sans-serif; font-size:15px; font-weight:500; color:var(--text-primary); transition:color 0.25s; }
+.faq-item.open .faq-q { color:var(--gold); }
+.faq-icon { width:22px; height:22px; flex-shrink:0; border:1.5px solid var(--border); border-radius:50%; position:relative; transition:border-color 0.25s,background 0.25s,transform 0.35s; }
+.faq-icon::before,.faq-icon::after { content:''; position:absolute; background:var(--gold); border-radius:2px; }
+.faq-icon::before { width:10px; height:1.5px; top:50%; left:50%; transform:translate(-50%,-50%); }
+.faq-icon::after  { width:1.5px; height:10px; top:50%; left:50%; transform:translate(-50%,-50%); }
+.faq-item.open .faq-icon { border-color:var(--gold); background:var(--gold-pale); transform:rotate(45deg); }
+.faq-a { max-height:0; overflow:hidden; transition:max-height 0.45s,padding 0.35s; padding:0 24px; }
+.faq-item.open .faq-a { max-height:220px; padding:0 24px 22px; }
+.faq-a p { font-size:14px; line-height:1.8; color:var(--text-secondary); border-top:1px solid var(--border); padding-top:16px; }
+
+/* ── CONTACT ─────────────────────────────────────────────── */
+#contact { background:var(--bg-base); display:grid; grid-template-columns:1fr 1.2fr; gap:80px; align-items:start; }
+.contact-desc { font-size:15px; line-height:1.8; color:var(--text-secondary); margin-bottom:32px; }
+.contact-info { display:flex; flex-direction:column; gap:10px; }
+.contact-row { display:flex; align-items:center; gap:16px; padding:14px 18px; border-radius:12px; text-decoration:none; color:inherit; transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s; }
+.contact-row:hover { transform:translateX(4px); border-color:var(--border-hover); box-shadow:0 0 20px var(--gold-pale); }
+.contact-icon { width:44px; height:44px; border-radius:10px; background:var(--gold-pale); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.contact-icon svg { width:18px; height:18px; stroke:var(--gold); }
+.contact-row-label { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); margin-bottom:3px; }
+.contact-row-value { font-size:14.5px; color:var(--text-primary); font-weight:500; }
+.contact-gst-row { border-color:var(--border-hover) !important; }
+
+/* Form */
+#contact-form { border-radius:20px; padding:38px 34px; }
+.form-title { font-size:22px; font-weight:600; color:var(--text-primary); margin-bottom:26px; }
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.form-group { display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+.form-group label { font-size:11px; font-weight:500; letter-spacing:0.5px; color:var(--text-secondary); text-transform:uppercase; }
+.req { color:var(--gold); }
+.form-group input,.form-group select,.form-group textarea { background:rgba(255,255,255,0.04); border:1px solid var(--border); border-radius:8px; padding:12px 16px; font-size:14px; color:var(--text-primary); font-family:'Poppins',sans-serif; outline:none; width:100%; transition:border-color 0.25s,box-shadow 0.25s,background 0.25s; }
+.form-group input::placeholder,.form-group textarea::placeholder { color:var(--text-muted); }
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px var(--gold-pale); background:rgba(201,168,76,0.03); }
+.form-group input.error,.form-group textarea.error { border-color:#E24B4A; box-shadow:0 0 0 3px rgba(226,75,74,0.12); }
+.form-group textarea { resize:vertical; min-height:100px; }
+.form-group select option { background:var(--bg-surface); }
+.field-error { font-size:11.5px; color:#E24B4A; min-height:16px; margin-top:2px; }
+.form-btn { width:100%; justify-content:center; margin-top:8px; font-size:15px; padding:15px; }
+.btn-loading { display:none; }
+
+/* ── FOOTER ──────────────────────────────────────────────── */
+#footer { background:var(--bg-surface); border-top:1px solid var(--border); padding:64px 8% 36px; }
+.footer-top { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:44px; margin-bottom:44px; }
+.footer-logo { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; margin-bottom:5px; }
+.footer-logo span { color:var(--gold); }
+.footer-tagline { font-size:11.5px; color:var(--gold); letter-spacing:0.5px; margin-bottom:12px; }
+.footer-desc { font-size:13.5px; line-height:1.7; color:var(--text-secondary); max-width:280px; margin-bottom:18px; }
+
+.footer-icai { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.footer-icai-icon { flex-shrink:0; }
+.footer-icai-title { font-size:13px; font-weight:600; color:var(--gold); }
+.footer-icai-sub   { font-size:11px; color:var(--text-muted); }
+.footer-gst { font-size:12px; color:var(--text-muted); letter-spacing:0.4px; margin-bottom:16px; }
+.footer-gst strong { color:var(--gold-light); }
+
+/* Social buttons */
+.footer-socials { display:flex; gap:8px; }
+.social-btn {
+  width:36px; height:36px; border-radius:50%;
+  border:1px solid var(--border); background:var(--gold-pale);
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none; color:var(--gold);
+  transition:background 0.25s,border-color 0.25s,transform 0.2s;
+}
+.social-btn:hover { background:var(--gold); color:var(--bg-base); border-color:var(--gold); transform:translateY(-2px); }
+.social-btn svg { stroke:currentColor; }
+
+.footer-links-col h4 { font-size:11px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+.footer-links-col ul { list-style:none; }
+.footer-links-col li { margin-bottom:10px; }
+.footer-links-col a { font-size:13.5px; color:var(--text-secondary); text-decoration:none; transition:color 0.2s,padding-left 0.2s; }
+.footer-links-col a:hover { color:var(--gold-light); padding-left:4px; }
+
+.footer-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; padding-top:22px; border-top:1px solid var(--border); font-size:12px; color:var(--text-muted); }
+
+/* ── SCROLL TO TOP ───────────────────────────────────────── */
+#scroll-top { position:fixed; bottom:100px; right:28px; width:48px; height:48px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--gold-light)); border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 20px var(--gold-glow); z-index:400; opacity:0; transform:translateY(20px) scale(0.8); transition:opacity 0.35s,transform 0.35s,box-shadow 0.25s; }
+#scroll-top.visible { opacity:1; transform:translateY(0) scale(1); }
+#scroll-top:hover { box-shadow:0 6px 28px rgba(201,168,76,0.5); transform:translateY(-3px) scale(1.05); }
+#scroll-top svg { width:20px; height:20px; stroke:#060D18; }
+
+/* ── WHATSAPP FLOAT ──────────────────────────────────────── */
+#whatsapp-float {
+  position: fixed; bottom: 32px; right: 28px;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--green-wa);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+  text-decoration: none; z-index: 400;
+  animation: wa-pulse 2.5s ease-in-out infinite;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.6); }
+#whatsapp-float svg { stroke: white; }
+@keyframes wa-pulse {
+  0%,100% { box-shadow: 0 4px 24px rgba(37,211,102,0.4), 0 0 0 0 rgba(37,211,102,0.3); }
+  50%      { box-shadow: 0 4px 24px rgba(37,211,102,0.4), 0 0 0 10px rgba(37,211,102,0); }
+}
+
+/* ── MODAL ───────────────────────────────────────────────── */
+#success-modal { position:fixed; inset:0; z-index:600; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity 0.35s; }
+#success-modal.show { opacity:1; pointer-events:all; }
+.modal-backdrop { position:absolute; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); }
+.modal-box { position:relative; border-radius:20px; padding:52px 44px; text-align:center; max-width:420px; width:90%; transform:scale(0.9); transition:transform 0.35s; z-index:1; }
+#success-modal.show .modal-box { transform:scale(1); }
+.modal-icon { width:72px; height:72px; border-radius:50%; background:var(--gold-pale); border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; font-size:32px; color:var(--gold); margin:0 auto 24px; animation:pop-in 0.4s ease; }
+@keyframes pop-in { 0%{transform:scale(0.5);opacity:0} 70%{transform:scale(1.1)} 100%{transform:scale(1);opacity:1} }
+.modal-box h3 { font-size:24px; font-weight:700; color:var(--text-primary); margin-bottom:12px; }
+.modal-box p  { font-size:14px; color:var(--text-secondary); line-height:1.7; margin-bottom:28px; }
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .hero-icai-badge { display: none; }
+  .nav-icai { display: none; }
+}
+@media (max-width: 1024px) {
+  #about, #contact { grid-template-columns: 1fr; gap: 50px; }
+  .why-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 768px) {
+  section { padding: 80px 6%; }
+  .nav-links { display: none; }
+  #hamburger { display: flex; }
+  .logo-text { display: none; }
+  .about-visual .float-badge { display: none; }
+  .why-grid { grid-template-columns: 1fr; }
+  .exp-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  #contact-form { padding: 26px 20px; }
+  .hero-stats { gap: 12px; }
+  .stat-glass { padding: 14px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+  #scroll-top { bottom: 96px; right: 20px; width: 42px; height: 42px; }
+  #whatsapp-float { bottom: 28px; right: 20px; width: 48px; height: 48px; }
+}
+@media (max-width: 480px) {
+  .hero-firm-name { font-size: 26px; }
+  .hero-title { font-size: 20px; }
+  .hero-buttons { flex-direction: column; }
+  .btn-primary, .btn-outline { width: 100%; justify-content: center; }
+  .stat-glass { flex: 0 0 calc(50% - 8px); }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">AK<span class="loader-amp">&</span>A</div>
+      <div class="loader-tagline">Ajay Keshri &amp; Associates</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+      <p class="loader-text">Loading Excellence…</p>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="Ajay Keshri & Associates">
+        <div class="logo-mark">AK<span>&amp;</span>A</div>
+        <div class="logo-text">
+          <span class="logo-firm">Ajay Keshri &amp; Associates</span>
+          <span class="logo-sub">Chartered Accountants</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#services"   class="nav-link">Services</a></li>
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#why"        class="nav-link">Why Us</a></li>
+        <li><a href="#faq"        class="nav-link">FAQ</a></li>
+        <li><a href="#contact"    class="nav-link nav-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          Free Consult
+        </a></li>
+      </ul>
+
+      <!-- Controls -->
+      <div class="nav-controls">
+        <!-- ICAI Badge desktop -->
+        <div class="nav-icai" title="ICAI Registered Member">
+          <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
+            <circle cx="18" cy="18" r="16" stroke="#C9A84C" stroke-width="1.2"/>
+            <text x="18" y="15" dominant-baseline="middle" text-anchor="middle"
+              font-family="Poppins,sans-serif" font-size="7" fill="#C9A84C" font-weight="700">ICAI</text>
+            <text x="18" y="23" dominant-baseline="middle" text-anchor="middle"
+              font-family="Poppins,sans-serif" font-size="4" fill="#C9A84C" letter-spacing="0.3">MEMBER</text>
+          </svg>
+        </div>
+
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+          <span class="theme-icon sun">☀</span>
+          <span class="theme-icon moon">☽</span>
+        </button>
+        <button id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#services"   class="mob-link">Services</a></li>
+        <li><a href="#about"      class="mob-link">About</a></li>
+        <li><a href="#experience" class="mob-link">Experience</a></li>
+        <li><a href="#why"        class="mob-link">Why Us</a></li>
+        <li><a href="#faq"        class="mob-link">FAQ</a></li>
+        <li><a href="#contact"    class="mob-link mob-cta">Free Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="hero">
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="hero-orb orb-1" aria-hidden="true"></div>
+    <div class="hero-orb orb-2" aria-hidden="true"></div>
+    <div class="hero-orb orb-3" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <!-- ICAI floating logo in hero (right side) -->
+    <div class="hero-icai-badge" aria-hidden="true">
+      <svg viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="45" cy="45" r="42" stroke="#C9A84C" stroke-width="1.5"/>
+        <circle cx="45" cy="45" r="34" stroke="#C9A84C" stroke-width="0.5" stroke-dasharray="4 4"/>
+        <text x="45" y="38" dominant-baseline="middle" text-anchor="middle"
+          font-family="Poppins,sans-serif" font-size="14" fill="#C9A84C" font-weight="700">ICAI</text>
+        <text x="45" y="52" dominant-baseline="middle" text-anchor="middle"
+          font-family="Poppins,sans-serif" font-size="7" fill="#C9A84C" letter-spacing="1">MEMBER</text>
+        <text x="45" y="62" dominant-baseline="middle" text-anchor="middle"
+          font-family="Poppins,sans-serif" font-size="5.5" fill="rgba(201,168,76,0.6)" letter-spacing="0.3">ACA · 2025</text>
+        <path d="M22 70 Q45 80 68 70" stroke="#C9A84C" stroke-width="0.8" fill="none"/>
+      </svg>
+      <span class="icai-badge-label">ICAI Registered</span>
+    </div>
+
+    <div class="hero-content reveal-up">
+      <!-- Firm badge -->
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Chartered Accountants &nbsp;·&nbsp; Waidhan, Singrauli M.P.
+      </div>
+
+      <!-- Firm Name -->
+      <div class="hero-firm-name">AJAY KESHRI<br><span class="firm-and">&amp;</span> ASSOCIATES</div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-em">
+          <em id="typing-text"></em><span class="cursor">|</span>
+        </span>
+      </h1>
+
+      <p class="hero-tagline">
+        CA Ajay Kumar Keshri &nbsp;·&nbsp; B.Com, ACA &nbsp;·&nbsp; Proprietor
+      </p>
+
+      <div class="hero-divider"></div>
+
+      <p class="hero-desc">
+        Providing expert financial &amp; compliance services — Tax Filing, GST, Statutory Audit,
+        TDS, and Business Registration — with precision, integrity, and a personal touch.
+        Serving individuals and businesses across Waidhan, Singrauli, and M.P.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">
+          <span>Get Free Consultation</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+918109639691" class="btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          Call Now
+        </a>
+      </div>
+
+      <!-- GST + Contact quick row -->
+      <div class="hero-info-row">
+        <div class="hero-info-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          GST: <strong>23FYGPK1520L1ZJ</strong>
+        </div>
+        <div class="hero-info-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07"/></svg>
+          +91 8109639691
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero-stats reveal-up" style="--delay:0.4s">
+      <div class="stat-glass">
+        <span class="stat-num" data-target="200" data-suffix="+">0</span>
+        <span class="stat-label">Clients Served</span>
+      </div>
+      <div class="stat-glass">
+        <span class="stat-num" data-target="500" data-suffix="+">0</span>
+        <span class="stat-label">Cases Handled</span>
+      </div>
+      <div class="stat-glass">
+        <span class="stat-num" data-target="100" data-suffix="%">0</span>
+        <span class="stat-label">Compliance Rate</span>
+      </div>
+      <div class="stat-glass">
+        <span class="stat-num" data-target="6" data-suffix="+">0</span>
+        <span class="stat-label">Core Services</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════ -->
+  <section id="services">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">What We Offer</div>
+      <h2 class="section-title">Our <em>Services</em></h2>
+      <p class="section-sub">End-to-end financial and compliance services for individuals, firms, and businesses in Singrauli and across Madhya Pradesh.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card glass reveal-up" style="--delay:0s">
+        <div class="card-glow"></div>
+        <span class="service-num">01</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 14l2 2 4-4M4 6h16M4 10h16M4 14h8M4 18h6"/></svg>
+        </div>
+        <h3 class="service-name">Tax Filing & ITR</h3>
+        <p class="service-desc">Accurate Income Tax Return filing for individuals, HUFs, firms, and corporates. Maximise refunds, minimise liabilities legally.</p>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card glass reveal-up" style="--delay:0.1s">
+        <div class="card-glow"></div>
+        <span class="service-num">02</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="service-name">GST Services</h3>
+        <p class="service-desc">GST registration, GSTR filings, reconciliation, demand notices, and advisory — full compliance management for your business.</p>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card glass reveal-up" style="--delay:0.2s">
+        <div class="card-glow"></div>
+        <span class="service-num">03</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M6 20V10M12 20V4M18 20v-6"/></svg>
+        </div>
+        <h3 class="service-name">Audit & Accounting</h3>
+        <p class="service-desc">Statutory, Tax, Bank &amp; Internal Audit with complete bookkeeping and financial statement preparation.</p>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card glass reveal-up" style="--delay:0.3s">
+        <div class="card-glow"></div>
+        <span class="service-num">04</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 class="service-name">TDS Compliance</h3>
+        <p class="service-desc">Expert TDS deduction, quarterly filings (24Q, 26Q, 27Q), Form 16/16A generation, TRACES portal, and notice resolution.</p>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card glass reveal-up" style="--delay:0.4s">
+        <div class="card-glow"></div>
+        <span class="service-num">05</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="service-name">Business Registration</h3>
+        <p class="service-desc">Company incorporation, LLP formation, MSME/Udyam registration, and all MCA/ROC filings — end-to-end.</p>
+        <div class="card-arrow">→</div>
+      </div>
+
+      <div class="service-card glass reveal-up" style="--delay:0.5s">
+        <div class="card-glow"></div>
+        <span class="service-num">06</span>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h3 class="service-name">Financial Advisory</h3>
+        <p class="service-desc">Strategic financial planning, business structuring, investment guidance, and tax optimisation tailored to your goals.</p>
+        <div class="card-arrow">→</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section id="about">
+
+    <div class="about-visual reveal-left">
+      <div class="about-card glass">
+
+        <!-- ICAI Logo in about card -->
+        <div class="icai-logo-wrap">
+          <div class="icai-svg-wrap">
+            <svg viewBox="0 0 80 80" fill="none" width="60" height="60">
+              <circle cx="40" cy="40" r="37" stroke="#C9A84C" stroke-width="1.5"/>
+              <circle cx="40" cy="40" r="29" stroke="#C9A84C" stroke-width="0.5" stroke-dasharray="3 3"/>
+              <text x="40" y="35" dominant-baseline="middle" text-anchor="middle"
+                font-family="Poppins,sans-serif" font-size="11" fill="#C9A84C" font-weight="700">ICAI</text>
+              <text x="40" y="46" dominant-baseline="middle" text-anchor="middle"
+                font-family="Poppins,sans-serif" font-size="5.5" fill="#C9A84C" letter-spacing="0.8">MEMBER</text>
+              <path d="M18 60 Q40 70 62 60" stroke="#C9A84C" stroke-width="0.8" fill="none"/>
+            </svg>
+          </div>
+          <div>
+            <span class="icai-label">ICAI Registered</span>
+            <span class="icai-sub">Associate Chartered Accountant</span>
+          </div>
+        </div>
+
+        <div class="about-avatar">AK</div>
+        <div class="about-meta">
+          <p class="about-meta-name">CA Ajay Kumar Keshri</p>
+          <p class="about-meta-title">Proprietor · Chartered Accountant</p>
+        </div>
+
+        <!-- Qualification pills -->
+        <div class="qual-pills">
+          <span class="qual-pill">B.Com</span>
+          <span class="qual-pill">ACA</span>
+          <span class="qual-pill gold-pill">Qualified 2025</span>
+        </div>
+
+        <div class="about-stats-mini">
+          <div><strong>50+</strong><span>Clients</span></div>
+          <div class="about-divider-v"></div>
+          <div><strong>6+</strong><span>Services</span></div>
+          <div class="about-divider-v"></div>
+          <div><strong>ACA</strong><span>Certified</span></div>
+        </div>
+      </div>
+
+      <!-- Floating badges -->
+      <div class="float-badge fb-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        GST Registered
+      </div>
+      <div class="float-badge fb-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Waidhan, Singrauli
+      </div>
+    </div>
+
+    <div class="about-content reveal-right">
+      <div class="section-eyebrow">About the Firm</div>
+      <h2 class="section-title">Ajay Keshri &amp; Associates —<br>Built on <em>Trust</em></h2>
+
+      <p class="about-text">
+        <strong>Ajay Keshri &amp; Associates</strong> is a proprietorship Chartered Accountant firm
+        based in Waidhan, Singrauli, Madhya Pradesh — committed to delivering world-class financial
+        and compliance services to individuals, businesses, and corporates.
+      </p>
+      <p class="about-text">
+        Led by <strong>CA Ajay Kumar Keshri</strong>, the firm is headed by an ACA-qualified
+        professional holding a <strong>Bachelor of Commerce (B.Com)</strong> degree, qualified in
+        <strong>2025</strong> from the Institute of Chartered Accountants of India (ICAI) — bringing
+        current, accurate expertise to every client engagement.
+      </p>
+
+      <!-- GST highlight -->
+      <div class="gst-highlight glass">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <div>
+          <p class="gst-label">GST Registration Number (GSTIN)</p>
+          <p class="gst-value">23FYGPK1520L1ZJ</p>
+        </div>
+      </div>
+
+      <div class="about-credentials">
+        <div class="credential-item glass">
+          <div class="credential-dot"></div>
+          <p>Associate Member — Institute of Chartered Accountants of India (ICAI)</p>
+        </div>
+        <div class="credential-item glass">
+          <div class="credential-dot"></div>
+          <p>GST Registered Practitioner — GSTIN: 23FYGPK1520L1ZJ</p>
+        </div>
+        <div class="credential-item glass">
+          <div class="credential-dot"></div>
+          <p>Expert in Statutory Audit, Tax Audit, Bank Audit &amp; Internal Audit</p>
+        </div>
+        <div class="credential-item glass">
+          <div class="credential-dot"></div>
+          <p>Specialist in TDS Filings and GST &amp; Income Tax dispute handling</p>
+        </div>
+      </div>
+
+      <a href="#contact" class="btn-primary" style="margin-top:36px; display:inline-flex">
+        <span>Connect With Us</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       EXPERIENCE
+  ══════════════════════════════════════ -->
+  <section id="experience">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">Professional Track Record</div>
+      <h2 class="section-title">Areas of <em>Expertise</em></h2>
+      <p class="section-sub">Hands-on experience across accounting, audit, and compliance — delivering reliable, accurate results for every client.</p>
+    </div>
+
+    <div class="exp-grid">
+
+      <div class="exp-card glass reveal-up" style="--delay:0s">
+        <div class="exp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div class="exp-content">
+          <h3>Statutory Audit</h3>
+          <p>Statutory audits under Companies Act, 2013 — ensuring financial statement accuracy, regulatory compliance, and stakeholder confidence.</p>
+        </div>
+        <div class="exp-tag">Audit</div>
+      </div>
+
+      <div class="exp-card glass reveal-up" style="--delay:0.1s">
+        <div class="exp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 14l2 2 4-4M4 6h16M4 10h16M4 14h8M4 18h6"/></svg>
+        </div>
+        <div class="exp-content">
+          <h3>Tax Audit</h3>
+          <p>Tax Audits u/s 44AB of the Income Tax Act — detailed report preparation, ICAI standard compliance, and accurate Form 3CA/3CB/3CD filings.</p>
+        </div>
+        <div class="exp-tag">Tax</div>
+      </div>
+
+      <div class="exp-card glass reveal-up" style="--delay:0.2s">
+        <div class="exp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="exp-content">
+          <h3>TDS Filings</h3>
+          <p>TDS computation, quarterly returns (24Q, 26Q, 27Q, 27EQ), Form 16/16A generation, TRACES management, and TDS notice resolution.</p>
+        </div>
+        <div class="exp-tag">TDS</div>
+      </div>
+
+      <div class="exp-card glass reveal-up" style="--delay:0.3s">
+        <div class="exp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="exp-content">
+          <h3>GST & Income Tax</h3>
+          <p>Handled numerous GST registrations, GSTR filings, reconciliations, demand notices, and Income Tax assessments — with successful outcomes.</p>
+        </div>
+        <div class="exp-tag">GST / IT</div>
+      </div>
+
+      <div class="exp-card glass reveal-up" style="--delay:0.4s">
+        <div class="exp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+        </div>
+        <div class="exp-content">
+          <h3>Bank Audit</h3>
+          <p>Concurrent and statutory bank audits — verification of advances, deposits, NPA identification, and RBI compliance reporting.</p>
+        </div>
+        <div class="exp-tag">Banking</div>
+      </div>
+
+      <div class="exp-card glass reveal-up" style="--delay:0.5s">
+        <div class="exp-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+        </div>
+        <div class="exp-content">
+          <h3>Internal Audit</h3>
+          <p>Internal audit frameworks — reviewing internal controls, identifying process gaps, and providing actionable improvement recommendations.</p>
+        </div>
+        <div class="exp-tag">Internal</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       WHY US
+  ══════════════════════════════════════ -->
+  <section id="why">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">Why Choose Us</div>
+      <h2 class="section-title">Our <em>Commitment</em> to You</h2>
+    </div>
+    <div class="why-grid">
+
+      <div class="why-card glass reveal-up" style="--delay:0s">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Fresh ACA Expertise</h3>
+        <p>ICAI-qualified in 2025 — current knowledge of tax laws, GST framework, and audit standards applied to every engagement.</p>
+      </div>
+
+      <div class="why-card glass reveal-up" style="--delay:0.1s">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <h3>Timely Delivery</h3>
+        <p>Deadlines are sacred. Every return, audit, and filing is completed accurately and on time — zero late fees for our clients.</p>
+      </div>
+
+      <div class="why-card glass reveal-up" style="--delay:0.2s">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+        <h3>Strict Confidentiality</h3>
+        <p>All financial data handled with absolute discretion, following ICAI's professional ethics and code of conduct.</p>
+      </div>
+
+      <div class="why-card glass reveal-up" style="--delay:0.3s">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>Direct CA Attention</h3>
+        <p>As a proprietorship, you deal directly with CA Ajay Kumar Keshri — no juniors, no hand-offs. Personal service every time.</p>
+      </div>
+
+      <div class="why-card glass reveal-up" style="--delay:0.4s">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>End-to-End Compliance</h3>
+        <p>From business registration to annual filings — we handle the complete compliance lifecycle so you focus on growth.</p>
+      </div>
+
+      <div class="why-card glass reveal-up" style="--delay:0.5s">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>Transparent Pricing</h3>
+        <p>Competitive, transparent fees — no hidden charges. Quality CA services accessible to every business and individual.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════ -->
+  <section id="faq">
+    <div class="section-head reveal-up">
+      <div class="section-eyebrow">Have Questions?</div>
+      <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+    </div>
+    <div class="faq-list reveal-up">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What is Ajay Keshri &amp; Associates' GSTIN?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-a">
+          <p>The firm is GST registered. Our GSTIN is <strong>23FYGPK1520L1ZJ</strong>. This can be verified on the official GST portal at gst.gov.in.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What are CA Ajay Kumar Keshri's qualifications?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-a">
+          <p>CA Ajay Kumar Keshri holds a <strong>Bachelor of Commerce (B.Com)</strong> degree and is an <strong>Associate Chartered Accountant (ACA)</strong> — qualified in <strong>2025</strong> from the Institute of Chartered Accountants of India (ICAI).</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Where is the office located?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-a">
+          <p>Our office is at <strong>Shingawai Complex, Vindhyanagar Road, Waidhan, Singrauli, Madhya Pradesh — 486886</strong>. You can reach us at +91 8109639691 or +91 9203639691, or email at caajaykeshri@gmail.com.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What documents are needed for ITR filing?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-a">
+          <p>Typically: PAN card, Aadhaar, Form 16, bank statements, investment proofs (80C/80D), and details of other income. We guide you through the exact documents based on your income profile.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Do you handle TDS notices and demand letters?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-a">
+          <p>Yes. We resolve 26AS mismatches, TRACES notices, short deduction demands, and late filing penalties — efficiently handling all TDS disputes with minimum liability for clients.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Is the first consultation free?
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-a">
+          <p>Yes — completely free. We understand your situation, explain compliance requirements, and suggest the best services — with no obligation to proceed. Call +91 8109639691 to book your slot.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="contact-left reveal-left">
+      <div class="section-eyebrow">Get in Touch</div>
+      <h2 class="section-title">Book a Free <em>Consultation</em></h2>
+      <p class="contact-desc">Reach out for any financial, tax, or compliance query. We respond within 24 hours.</p>
+
+      <div class="contact-info">
+
+        <a href="tel:+918109639691" class="contact-row glass">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          </div>
+          <div>
+            <p class="contact-row-label">Phone (Primary)</p>
+            <p class="contact-row-value">+91 8109639691</p>
+          </div>
+        </a>
+
+        <a href="tel:+919203639691" class="contact-row glass">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          </div>
+          <div>
+            <p class="contact-row-label">Phone (Alternate)</p>
+            <p class="contact-row-value">+91 9203639691</p>
+          </div>
+        </a>
+
+        <a href="mailto:caajaykeshri@gmail.com" class="contact-row glass">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p class="contact-row-label">Email</p>
+            <p class="contact-row-value">caajaykeshri@gmail.com</p>
+          </div>
+        </a>
+
+        <div class="contact-row glass">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="contact-row-label">Office Address</p>
+            <p class="contact-row-value" style="font-size:13px;line-height:1.5">Shingawai Complex, Vindhyanagar Road,<br>Waidhan, Singrauli, M.P. — 486886</p>
+          </div>
+        </div>
+
+        <div class="contact-row glass contact-gst-row">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <p class="contact-row-label">GSTIN</p>
+            <p class="contact-row-value" style="font-size:13px;letter-spacing:1.3px;font-weight:600;">23FYGPK1520L1ZJ</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="contact-right reveal-right">
+      <form id="contact-form" class="glass" novalidate>
+        <h3 class="form-title">Send a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Full Name <span class="req">*</span></label>
+            <input type="text" id="fname" name="fname" placeholder="Your name" autocomplete="name" />
+            <span class="field-error" id="fname-err"></span>
+          </div>
+          <div class="form-group">
+            <label for="fphone">Phone <span class="req">*</span></label>
+            <input type="tel" id="fphone" name="fphone" placeholder="+91 XXXXX XXXXX" autocomplete="tel" />
+            <span class="field-error" id="fphone-err"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="femail">Email Address <span class="req">*</span></label>
+          <input type="email" id="femail" name="femail" placeholder="you@example.com" autocomplete="email" />
+          <span class="field-error" id="femail-err"></span>
+        </div>
+        <div class="form-group">
+          <label for="fservice">Service Required</label>
+          <select id="fservice" name="fservice">
+            <option value="">Select a service</option>
+            <option>Tax Filing / ITR</option>
+            <option>GST Services</option>
+            <option>Statutory Audit</option>
+            <option>Tax Audit</option>
+            <option>TDS Filing & Compliance</option>
+            <option>Bank Audit</option>
+            <option>Internal Audit</option>
+            <option>Business Registration</option>
+            <option>Financial Advisory</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fmessage">Message <span class="req">*</span></label>
+          <textarea id="fmessage" name="fmessage" placeholder="Tell us about your requirements…" rows="4"></textarea>
+          <span class="field-error" id="fmessage-err"></span>
+        </div>
+        <button type="submit" class="btn-primary form-btn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-loading" aria-hidden="true">Sending…</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo"><span>Ajay Keshri</span> &amp; Associates</div>
+        <p class="footer-tagline">Chartered Accountants · Proprietorship Firm · Waidhan, M.P.</p>
+        <p class="footer-desc">Professional financial and compliance services — Tax, GST, Audit, TDS, and Business Registration — with integrity and precision.</p>
+
+        <!-- ICAI footer badge -->
+        <div class="footer-icai">
+          <div class="footer-icai-icon">
+            <svg viewBox="0 0 44 44" fill="none" width="44" height="44">
+              <circle cx="22" cy="22" r="20" stroke="#C9A84C" stroke-width="1.2"/>
+              <text x="22" y="20" dominant-baseline="middle" text-anchor="middle"
+                font-family="Poppins,sans-serif" font-size="8" fill="#C9A84C" font-weight="700">ICAI</text>
+              <text x="22" y="28" dominant-baseline="middle" text-anchor="middle"
+                font-family="Poppins,sans-serif" font-size="4.5" fill="#C9A84C" letter-spacing="0.5">MEMBER</text>
+            </svg>
+          </div>
+          <div>
+            <p class="footer-icai-title">ICAI Member · ACA · 2025</p>
+            <p class="footer-icai-sub">Associate Chartered Accountant</p>
+          </div>
+        </div>
+
+        <p class="footer-gst">GSTIN: <strong>23FYGPK1520L1ZJ</strong></p>
+
+        <!-- Social placeholders -->
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="WhatsApp" title="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+          </a>
+          <a href="mailto:caajaykeshri@gmail.com" class="social-btn" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="tel:+918109639691" class="social-btn" aria-label="Phone" title="Call">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Tax Filing & ITR</a></li>
+          <li><a href="#services">GST Services</a></li>
+          <li><a href="#services">Audit & Accounting</a></li>
+          <li><a href="#services">TDS Compliance</a></li>
+          <li><a href="#services">Business Registration</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Expertise</h4>
+        <ul>
+          <li><a href="#experience">Statutory Audit</a></li>
+          <li><a href="#experience">Tax Audit</a></li>
+          <li><a href="#experience">Bank Audit</a></li>
+          <li><a href="#experience">Internal Audit</a></li>
+          <li><a href="#experience">TDS Filings</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+918109639691">+91 8109639691</a></li>
+          <li><a href="tel:+919203639691">+91 9203639691</a></li>
+          <li><a href="mailto:caajaykeshri@gmail.com">caajaykeshri@gmail.com</a></li>
+          <li><a href="#about">About the Firm</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Ajay Keshri &amp; Associates. All rights reserved. &nbsp;|&nbsp; B.Com · ACA · GSTIN: 23FYGPK1520L1ZJ</p>
+      <p>Waidhan, Singrauli, Madhya Pradesh — 486886</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="scroll-top" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/918109639691" id="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp Chat" title="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="26" height="26">
+      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+    </svg>
+  </a>
+
+  <!-- Success Modal -->
+  <div id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box glass">
+      <div class="modal-icon">✓</div>
+      <h3 id="modal-title">Message Sent!</h3>
+      <p>Thank you for contacting <strong>Ajay Keshri &amp; Associates</strong>. We will reach out within 24 hours.</p>
+      <button class="btn-primary" id="modal-close"><span>Back to Site</span></button>
+    </div>
+  </div>
+
+  <script>
+/* ══════════════════════════════════════════════════════════════
+   AJAY KESHRI & ASSOCIATES — PREMIUM JAVASCRIPT
+   Loader · Theme · Particles · Typing · Counters ·
+   Navbar · Reveal · Parallax · FAQ · Form · Modal · WhatsApp
+══════════════════════════════════════════════════════════════ */
+'use strict';
+
+const $  = (s, c = document) => c.querySelector(s);
+const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+/* ── 1. PAGE LOADER ──────────────────────────────────────── */
+(function initLoader() {
+  const loader = $('#loader');
+  if (!loader) return;
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      loader.classList.add('loaded');
+      loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+    }, 2100);
+  });
+})();
+
+/* ── 2. SCROLL PROGRESS BAR ──────────────────────────────── */
+(function initScrollProgress() {
+  const bar = $('#scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (window.scrollY / total) * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
+/* ── 3. DARK / LIGHT MODE ────────────────────────────────── */
+(function initTheme() {
+  const btn  = $('#theme-toggle');
+  const html = document.documentElement;
+  if (!btn) return;
+  html.setAttribute('data-theme', localStorage.getItem('aka-theme') || 'dark');
+  btn.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('aka-theme', next);
+  });
+})();
+
+/* ── 4. STICKY NAVBAR ────────────────────────────────────── */
+(function initNavbar() {
+  const nav = $('#navbar');
+  if (!nav) return;
+  const tick = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
+})();
+
+/* ── 5. HAMBURGER MOBILE MENU ────────────────────────────── */
+(function initMobileMenu() {
+  const btn  = $('#hamburger');
+  const menu = $('#mobile-menu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', () => {
+    const open = btn.classList.toggle('open');
+    menu.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-hidden', String(!open));
+  });
+  $$('.mob-link', menu).forEach(l => l.addEventListener('click', () => {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+  }));
+})();
+
+/* ── 6. ACTIVE SECTION NAV HIGHLIGHT ────────────────────── */
+(function initActiveNav() {
+  const sections = $$('section[id]');
+  const links    = $$('.nav-link');
+  if (!sections.length || !links.length) return;
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const id = e.target.id;
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' }).observe
+    ? sections.forEach(s => new IntersectionObserver(entries => {
+        entries.forEach(e => { if(e.isIntersecting) {
+          links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${e.target.id}`));
+        }});
+      }, { rootMargin: '-40% 0px -55% 0px' }).observe(s))
+    : null;
+})();
+
+/* ── 7. SCROLL REVEAL ────────────────────────────────────── */
+(function initReveal() {
+  const els = $$('.reveal-up, .reveal-left, .reveal-right');
+  if (!els.length) return;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+})();
+
+/* ── 8. ANIMATED COUNTERS ────────────────────────────────── */
+(function initCounters() {
+  const counters = $$('.stat-num[data-target]');
+  if (!counters.length) return;
+
+  function animate(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const suffix = el.dataset.suffix || '';
+    const dur    = 1800;
+    const start  = performance.now();
+    function tick(now) {
+      const p = Math.min((now - start) / dur, 1);
+      el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); } });
+  }, { threshold: 0.4 });
+  counters.forEach(c => io.observe(c));
+})();
+
+/* ── 9. TYPING TEXT EFFECT ───────────────────────────────── */
+(function initTyping() {
+  const el = $('#typing-text');
+  if (!el) return;
+
+  const phrases = [
+    'Trusted CA Services',
+    'Tax Filing Experts',
+    'GST Advisory',
+    'Audit & Compliance',
+    'TDS Specialists',
+    'Business Registration',
+    'Financial Partner',
+  ];
+
+  let pi = 0, ci = 0, deleting = false, paused = false;
+
+  function type() {
+    if (paused) return;
+    const phrase = phrases[pi];
+    if (!deleting) {
+      el.textContent = phrase.slice(0, ci + 1);
+      ci++;
+      if (ci === phrase.length) {
+        paused = true;
+        setTimeout(() => { paused = false; deleting = true; type(); }, 2400);
+        return;
+      }
+      setTimeout(type, 75);
+    } else {
+      el.textContent = phrase.slice(0, ci - 1);
+      ci--;
+      if (ci === 0) {
+        deleting = false;
+        pi = (pi + 1) % phrases.length;
+        setTimeout(type, 350);
+        return;
+      }
+      setTimeout(type, 42);
+    }
+  }
+  setTimeout(type, 2700);
+})();
+
+/* ── 10. PARTICLE CANVAS ─────────────────────────────────── */
+(function initParticles() {
+  const canvas = $('#particle-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const N   = 55;
+  const G   = 'rgba(201,168,76,';
+  let W, H, P;
+
+  function resize() { W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+
+  function create() {
+    P = Array.from({ length: N }, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      r: Math.random() * 1.6 + 0.3,
+      vx: (Math.random() - 0.5) * 0.24, vy: (Math.random() - 0.5) * 0.24,
+      a: Math.random() * 0.5 + 0.1,
+      da: (Math.random() * 0.003 + 0.001) * (Math.random() < 0.5 ? 1 : -1),
+    }));
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    P.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.a += p.da;
+      if (p.a < 0.05 || p.a > 0.65) p.da *= -1;
+      if (p.x < -10) p.x = W + 10; if (p.x > W + 10) p.x = -10;
+      if (p.y < -10) p.y = H + 10; if (p.y > H + 10) p.y = -10;
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = G + p.a.toFixed(2) + ')'; ctx.fill();
+    });
+    for (let i = 0; i < N; i++) for (let j = i + 1; j < N; j++) {
+      const dx = P[i].x - P[j].x, dy = P[i].y - P[j].y, d = Math.sqrt(dx*dx+dy*dy);
+      if (d < 100) {
+        ctx.beginPath(); ctx.moveTo(P[i].x, P[i].y); ctx.lineTo(P[j].x, P[j].y);
+        ctx.strokeStyle = G + ((1 - d/100) * 0.11).toFixed(3) + ')';
+        ctx.lineWidth = 0.5; ctx.stroke();
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+
+  resize(); create(); draw();
+  window.addEventListener('resize', () => { resize(); create(); });
+})();
+
+/* ── 11. HERO PARALLAX ───────────────────────────────────── */
+(function initParallax() {
+  const content = $('.hero-content');
+  const orb1    = $('.orb-1');
+  const orb2    = $('.orb-2');
+  if (!content) return;
+  window.addEventListener('scroll', () => {
+    const s = window.scrollY;
+    if (s > window.innerHeight) return;
+    content.style.transform = `translateY(${s * 0.27}px)`;
+    content.style.opacity   = Math.max(0, 1 - s / 520);
+    if (orb1) orb1.style.transform = `translateY(${s * -0.1}px)`;
+    if (orb2) orb2.style.transform = `translateY(${s * 0.07}px)`;
+  }, { passive: true });
+})();
+
+/* ── 12. FAQ ACCORDION ───────────────────────────────────── */
+(function initFAQ() {
+  $$('.faq-item').forEach(item => {
+    const btn = $('.faq-q', item);
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const wasOpen = item.classList.contains('open');
+      $$('.faq-item').forEach(i => { i.classList.remove('open'); $('.faq-q', i)?.setAttribute('aria-expanded','false'); });
+      if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+})();
+
+/* ── 13. CONTACT FORM + VALIDATION + MODAL ───────────────── */
+(function initForm() {
+  const form  = $('#contact-form');
+  const modal = $('#success-modal');
+  if (!form) return;
+
+  const rules = {
+    fname:    { el:()=>$('#fname'),    err:()=>$('#fname-err'),    validate: v => !v.trim()?'Full name is required.':v.trim().length<2?'Enter a valid name.':'' },
+    fphone:   { el:()=>$('#fphone'),   err:()=>$('#fphone-err'),   validate: v => !v.trim()?'Phone number is required.':/^[+\d\s\-]{7,15}$/.test(v.trim())?'':'Enter a valid phone number.' },
+    femail:   { el:()=>$('#femail'),   err:()=>$('#femail-err'),   validate: v => !v.trim()?'Email is required.':/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())?'':'Enter a valid email address.' },
+    fmessage: { el:()=>$('#fmessage'), err:()=>$('#fmessage-err'), validate: v => !v.trim()?'Message is required.':v.trim().length<10?'Min 10 characters required.':'' },
+  };
+
+  function vf(k) {
+    const { el, err, validate } = rules[k];
+    const e = el(), er = err();
+    if (!e || !er) return true;
+    const msg = validate(e.value);
+    er.textContent = msg; e.classList.toggle('error', !!msg);
+    return !msg;
+  }
+
+  Object.keys(rules).forEach(k => {
+    const e = rules[k].el();
+    if (!e) return;
+    e.addEventListener('blur',  () => vf(k));
+    e.addEventListener('input', () => { if (e.classList.contains('error')) vf(k); });
+  });
+
+  form.addEventListener('submit', ev => {
+    ev.preventDefault();
+    if (!Object.keys(rules).every(k => vf(k))) {
+      form.querySelector('input.error, textarea.error')?.focus();
+      return;
+    }
+    const btn = form.querySelector('.form-btn');
+    const txt = btn.querySelector('.btn-text');
+    const lod = btn.querySelector('.btn-loading');
+    const arr = btn.querySelector('svg');
+    btn.disabled = true; txt.style.display='none'; lod.style.display='inline'; if(arr) arr.style.display='none';
+
+    setTimeout(() => {
+      btn.disabled=false; txt.style.display=''; lod.style.display='none'; if(arr) arr.style.display='';
+      form.reset();
+      Object.keys(rules).forEach(k => rules[k].el()?.classList.remove('error'));
+      showModal();
+    }, 1600);
+  });
+
+  function showModal() {
+    if (!modal) return;
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    $('#modal-close')?.focus();
+  }
+  function hideModal() {
+    if (!modal) return;
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  $('#modal-close')?.addEventListener('click', hideModal);
+  modal?.querySelector('.modal-backdrop')?.addEventListener('click', hideModal);
+  document.addEventListener('keydown', e => { if(e.key==='Escape' && modal?.classList.contains('show')) hideModal(); });
+})();
+
+/* ── 14. SCROLL TO TOP ───────────────────────────────────── */
+(function initScrollTop() {
+  const btn = $('#scroll-top');
+  if (!btn) return;
+  window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400), { passive:true });
+  btn.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+})();
+
+/* ── 15. SMOOTH SCROLL OFFSET ────────────────────────────── */
+(function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const el = document.getElementById(a.getAttribute('href').slice(1));
+      if (!el) return;
+      e.preventDefault();
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    });
+  });
+})();
+
+/* ── 16. SERVICE + EXP CARD TILT (desktop) ──────────────── */
+(function initTilt() {
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  $$('.service-card, .exp-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const dx = (e.clientX-(r.left+r.width/2))/(r.width/2);
+      const dy = (e.clientY-(r.top+r.height/2))/(r.height/2);
+      card.style.transform = `perspective(800px) rotateX(${dy*-4}deg) rotateY(${dx*4}deg) translateY(-6px)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform=''; });
+  });
+})();
+
+/* ── 17. FOOTER YEAR ─────────────────────────────────────── */
+(function() {
+  const el = $('#year');
+  if (el) el.textContent = new Date().getFullYear();
+})();
+
+/* ── 18. ACTIVE NAV FIX (robust version) ─────────────────── */
+(function initNavHighlight() {
+  const sections = $$('section[id]');
+  const links    = $$('.nav-link[href^="#"]');
+  if (!sections.length || !links.length) return;
+
+  function update() {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${current}`));
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+</script>
+</body>
+</html>
